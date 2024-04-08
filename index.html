@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>videojs-vr Demo</title>
-    <link href="./node_modules/video.js/dist/video-js.css" rel="stylesheet" />
-    <link
-      href="./node_modules/videojs-vr/dist/videojs-vr.css"
-      rel="stylesheet"
-    />
+    <link href="./libs/video.js/dist/video-js.css" rel="stylesheet" />
+    <link href="./libs/videojs-vr/dist/videojs-vr.css" rel="stylesheet" />
   </head>
   <body>
     <video
@@ -21,20 +18,8 @@
       <source src="./video360.mp4" type="video/mp4" />
     </video>
 
-    <script src="./node_modules/video.js/dist/video.js"></script>
-    <script src="./node_modules/videojs-vr/dist/videojs-vr.js"></script>
-    <script>
-      (function (window, videojs) {
-        var player = (window.player = videojs("videojs-vr-player"));
-        player.mediainfo = player.mediainfo || {};
-        player.mediainfo.projection = "360";
-
-        var vr = (window.vr = player.vr({
-          projection: "AUTO",
-          debug: true,
-          forceCardboard: false,
-        }));
-      })(window, window.videojs);
-    </script>
+    <script src="./libs/video.js/dist/video.js"></script>
+    <script src="./libs/videojs-vr/dist/videojs-vr.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
